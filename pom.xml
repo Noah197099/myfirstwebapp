@@ -38,6 +38,11 @@
     <artifactId>spring-boot-starter-thymeleaf</artifactId>
     <versionId>2.2.2.RELEASE</versionId>
 </dependency>
+		<dependency>
+			<groupId>com.in28minutes.springboot</groupId>
+			<artifactId>learn-spring-boot</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
