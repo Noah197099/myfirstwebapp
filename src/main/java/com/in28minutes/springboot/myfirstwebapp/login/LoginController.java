@@ -29,11 +29,6 @@ public class LoginController {
 		if(authenticationService.authenticate(name, password)) {
 		model.put("name", name);
 		
-		//authentication
-		//name - in28minutes
-		//password - dummy
-		
-		
 		return "welcome";
 		}
 		
