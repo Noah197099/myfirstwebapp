@@ -32,7 +32,7 @@ public class LoginController {
 		return "welcome";
 		}
 		
-		model.put("errorMessage", "Ivanlid Credentials! Please try again.");
+		model.put("errorMessage", "Invalid Credentials! Please try again.");
 		return "loginPage";
 	}
 }
