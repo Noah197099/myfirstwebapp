@@ -25,43 +25,38 @@
 			<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
 		</ul>
 	</nav>
-	
-	
+
+
 	<div class="container">
 		<h1 th:text="'Enter Todo Details'"></h1>
 		<form th:object="${todo}" method="post">
 			<fieldset class="mb-3">
-			<label th:for="description">Description: </label>
-			<input type="text" th:field=*{description} name="description" required="required">
-			<span th:errors="*{description}" class="text-danger"></span>
+				<label th:for="description">Description: </label>
+				<input type="text" th:field=*{description} name="description" required="required">
+				<span th:errors="*{description}" class="text-danger"></span>
 			</fieldset>
-			
+
 			<fieldset class="mb-3">
-			<label th:for="targetDate">Target Date: </label>
-			<input type="text" th:field=*{targetDate} name="targetDate" required="required">
-			<span th:errors="*{targetDate}" class="text-danger"></span>
+				<label th:for="targetDate">Target Date: </label>
+				<input type="text" th:field=*{targetDate} name="targetDate" required="required">
+				<span th:errors="*{targetDate}" class="text-danger"></span>
 			</fieldset>
-			
+
 			<input type="hidden" th:field=*{done}>
 			<input type="hidden" th:field=*{id}>
 			<input type="submit" class="btn btn-success">
-			
+
 		</form>
 		<br>
 		<a href="list-todos" class="btn btn-primary">Go Back</a>
-		
-		<script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-		<script src="webjars/jquery/3.6.0/jquery.min.js"></script>
-		<script src="webjars/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-		
-		<script type="text/javascript">
-			$('#targetDate').datepicker({
-    format: 'yyyy-mm-dd'
-});
-		</script>
 	</div>
+	<div th:replace="fragments :: footer"></div>
+	<script src="webjars/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript">
+		$('#targetDate').datepicker({
+			format: 'yyyy-mm-dd'
+		});
+	</script>
 </body>
 
 </html>
-
-
